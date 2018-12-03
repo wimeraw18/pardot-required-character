@@ -1,0 +1,40 @@
+<!-- How to turn required field character into a red star in Pardot -->
+
+<!-- 1. add jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- 2. set the pardot required field label to "default" -->
+
+<!-- 3. hide the default required field label -->
+<style>
+  #pardot-form p.required label,
+  #pardot-form span.required label {
+    background: none !important;
+  }
+</style>
+
+<!-- 4. create new required field character -->
+<script>
+  var requiredFieldCharacter = "<span style='color:red'> *</span>";
+</script>
+
+<!-- 5. append the new required field element to the required fields -->
+<script>
+  var requiredLabels = $("p.required label");
+  requiredLabels.append(requiredFieldCharacter);
+</script>
+
+<!-- End Result -->
+<style>
+  #pardot-form p.required label,
+  #pardot-form span.required label {
+    background: none !important;
+  }
+</style>
+<!-- before closing body tag -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  var requiredFieldCharacter = "<span style='color:red'> *</span>";
+  var requiredLabels = $("p.required label");
+  requiredLabels.append(requiredFieldCharacter);
+</script>
